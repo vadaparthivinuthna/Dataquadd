@@ -23,4 +23,7 @@ public class Persondao {
     public Optional<Person> fetchperson(int id){
         return personRepo.findById(id);
     }
+    public Optional<Person> deleteperson(int id){
+        return personRepo.findById(id);
+    }
 }

@@ -25,5 +25,11 @@ public class PersonController {
         return personService.fetchperson(id);
     }
 
+    @DeleteMapping("/delete")
+    public ResponseEntity deleteperson(int id){
+        return new ResponseEntity(personService.deleteperson(id),HttpStatus.OK);
+    }
+
+
 
 }
