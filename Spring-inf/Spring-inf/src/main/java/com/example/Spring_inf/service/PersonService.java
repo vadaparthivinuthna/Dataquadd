@@ -43,10 +43,12 @@ public class PersonService {
     public ResponseEntity deleteperson(int id){
         Optional<Person> db = persondao.deleteperson(id);
         if(db.isPresent()){
+            System.out.println("vinuthna");
             return new ResponseEntity(db.get(),HttpStatus.OK);
         }
         else{
             return new ResponseEntity("id is not found",HttpStatus.NOT_FOUND);
         }
+
     }
 }
