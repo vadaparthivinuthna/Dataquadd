@@ -29,4 +29,14 @@ public class PersonService {
             return new ResponseEntity<>("the id is not found",HttpStatus.NOT_FOUND);
         }
     }
+    public ResponseEntity  fetchperson(int id){
+      Optional<Person> person = persondao.fetchperson(id);
+      if(person.isPresent()){
+          return new ResponseEntity<>(person.get(),HttpStatus.OK);
+      }
+      else{
+          return new ResponseEntity<>("The person is not found in the Database",HttpStatus.NOT_FOUND);
+      }
+
+    }
 }

@@ -20,4 +20,7 @@ public class Persondao {
     public Optional<Person> updateperson(int id){
         return personRepo.findById(id);
     }
+    public Optional<Person> fetchperson(int id){
+        return personRepo.findById(id);
+    }
 }

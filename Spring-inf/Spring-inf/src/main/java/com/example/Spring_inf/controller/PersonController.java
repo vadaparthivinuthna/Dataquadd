@@ -20,6 +20,10 @@ public class PersonController {
     public ResponseEntity updateperson(@PathVariable int id, Person person){
         return new ResponseEntity(personService.updateperson(id,person).getBody(),HttpStatus.OK);
     }
+    @GetMapping("/fetch")
+    public ResponseEntity fetchperson(@RequestParam int id){
+        return personService.fetchperson(id);
+    }
 
 
 }
