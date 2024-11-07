@@ -43,7 +43,7 @@ public class PersonService {
     public ResponseEntity deleteperson(int id){
         Optional<Person> db = persondao.deleteperson(id);
         if(db.isPresent()){
-            System.out.println("vinuthna");
+            System.out.println("SAYAM AKSHAYA VEERASHAIVA LINGAYITH LINGA BALIJA");
             return new ResponseEntity(db.get(),HttpStatus.OK);
         }
         else{
